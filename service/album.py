@@ -1,4 +1,6 @@
-from src.model.album import Album
+from ..model.album import Album
+
+# import src.data.album as data
 import src.data.album as data
 
 

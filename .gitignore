@@ -1,8 +1,12 @@
-# **/__pycache__/
 migrations/versions/*.*
 migrations/versions/__pycache__/*.*
-# *.pyc
+
+# __pycache__/*.*
+# data/__pycache__/*.*
+
 # __pycache__/app.cpython-313.pyc
 # data/__pycache__/album.cpython-313.pyc
 # db/__pycache__/__init__.cpython-313.pyc
 # model/__pycache__/album.cpython-313.pyc
+# service/__pycache__/album.cpython-313.pyc
+# view/__pycache__/album.cpython-313.pyc

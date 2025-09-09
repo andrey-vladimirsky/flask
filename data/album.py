@@ -2,7 +2,7 @@ from flask import jsonify  # , request
 # from sqlalchemy import inspect
 
 from ..db import database
-from src.model.album import Album
+from ..model.album import Album
 # from .._model.track import Track
 
 

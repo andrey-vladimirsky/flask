@@ -11,7 +11,7 @@ app.config.from_object(configuration[getenv("CONFIG_MODE")])
 database.init_app(app)
 migrate.init_app(app, database)
 
-print(database, migrate, sep="\n")
+# print(database, migrate, sep="\n")
 
 app.register_blueprint(album, url_prefix="/album")
 
