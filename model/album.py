@@ -1,6 +1,6 @@
 from sqlalchemy import PrimaryKeyConstraint
 
-from ..db import database
+from src.db import database
 
 
 class Album(database.Model):
