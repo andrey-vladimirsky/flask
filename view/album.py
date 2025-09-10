@@ -13,4 +13,4 @@ def list() -> list[Album]:
 
 @album.route("/<id>")
 def get(id) -> Album:
-    return f"album_bp.route {id}"
+    return service.get(id)
