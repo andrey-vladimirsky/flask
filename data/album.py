@@ -1,8 +1,6 @@
 from flask import jsonify  # , request
 # from sqlalchemy import inspect
 
-from src.error import Missing
-
 from src.db import database
 from src.model.album import Album
 # from .._model.track import Track
@@ -16,8 +14,4 @@ def list() -> list[Album]:
 
 def get(id) -> Album:
     album = database.session.query(Album).get(id)
-    if album:
-        return jsonify(album.to_dictionary())
-    else:
-        raise Missing(msg="***")
-        # raise error.Missing(msg=f"Explorer {name} noot found")
+    return jsonify(album.to_dictionary())
