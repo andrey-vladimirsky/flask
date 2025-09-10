@@ -3,7 +3,7 @@ from flask import Flask
 
 from src.db import database, migrate
 from src.config import configuration
-from src.view.album import album
+from src.api.album import album
 
 app = Flask(__name__)
 app.config.from_object(configuration[getenv("CONFIG_MODE")])
