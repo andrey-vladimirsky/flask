@@ -2,7 +2,7 @@ from os import getenv
 from flask import Flask
 
 from src.db import database, migrate
-from config import configuration
+from src.config import configuration
 from src.view.album import album
 
 app = Flask(__name__)

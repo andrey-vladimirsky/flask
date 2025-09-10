@@ -1,6 +1,6 @@
 from flask import Blueprint
 
-from ..model.album import Album
+from src.model.album import Album
 import src.service.album as service
 
 album = Blueprint("album", __name__)
