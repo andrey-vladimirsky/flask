@@ -1,5 +1,7 @@
 from flask import jsonify  # , request
+
 # from sqlalchemy import inspect
+# from werkzeug.exceptions import InternalServerError
 
 from src.db import database
 from src.model.album import Album
@@ -13,5 +15,11 @@ def list() -> list[Album]:
 
 
 def get(id) -> Album:
+    # album = database.session.query(Album).get(id)
+    # return jsonify(album.to_dictionary())
+
     album = database.session.query(Album).get(id)
-    return jsonify(album.to_dictionary())
+    try:
+        return jsonify(album.to_dictionary())
+    except AttributeError:
+        raise AttributeError

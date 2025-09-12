@@ -13,4 +13,7 @@ def list() -> list[Album]:
 
 @album.route("/<id>")
 def get(id) -> Album:
-    return service.get(id)
+    try:
+        return service.get(id)
+    except AttributeError:
+        print("AttributeError")
